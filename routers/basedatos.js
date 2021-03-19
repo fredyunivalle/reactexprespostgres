@@ -1,10 +1,10 @@
 const { Client } = require('pg');
 const Router = require('express-promise-router');
-var config = require('../config');
+var keys = require('../confi/keys')
 
 
 const client = new Client({
-  connectionString: config.postgrest.url,
+  connectionString: keys.postgresurl,
   ssl: {
     rejectUnauthorized: false
   }
